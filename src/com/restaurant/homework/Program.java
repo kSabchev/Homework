@@ -30,18 +30,13 @@ public class Program {
 		Menu.addItem(espresso);
 		Menu.addItem(vegSandwich);
 		Menu.addItem(blackTea);
-		//Menu.removeItem(vegSandwich);
-		//Menu.removeItem(espresso);
-		//Menu.displayItems();
-		//ArrayList<Item> menu = Menu.getItems();
-		//System.out.println(menu);
 		
 		System.out.println("What do you want to order?");
-		System.out.println("1. Apple Juice");
+		System.out.println("1. Black Tea");
 		System.out.println("2. Tuna Sandwich");
 		System.out.println("3. Espresso");
 		System.out.println("4. Vegan Sandwich");
-		System.out.println("5. Black Tea");
+		System.out.println("5. Apple Juice");
 		System.out.println("6. Banana Juice");
 		System.out.println("7. Orange Juice");
 		
@@ -52,7 +47,7 @@ public class Program {
 		
 		switch(choice) {
 		case 1:
-			orderedItem = appleJuice;
+			orderedItem = blackTea;
 			break;
 		case 2:
 			orderedItem = tunaSandwich;
@@ -64,7 +59,7 @@ public class Program {
 			orderedItem = vegSandwich;
 			break;
 		case 5:	
-			orderedItem = blackTea;
+			orderedItem = appleJuice;
 			break;
 		case 6: 
 			orderedItem = bananaJuice;
@@ -82,16 +77,11 @@ public class Program {
 		PlaceOrder order = new PlaceOrder();
 		Order orderOne = new Order(orderedItem, quantity);
 		order.orderItem(orderOne);
-		//order.orderItem("Tuna Sandwich", 1);
+	
 		System.out.print("Your order is: ");
 		order.displayOrder(orderOne);
 		System.out.print("Your bill is: ");
-		//System.out.println(PayBill.amountToBePayed(order));
-		//System.out.println(PayBill.amountToBePayed(orderOne));
-		//double total_price = Double.valueOf(df.format(orderedItem.getCost()* quantity));
 		System.out.println("$" + Double.valueOf(df.format(orderedItem.getCost()* quantity)) );
-		//System.out.println("$" + total_price );
-		// + " "+ quantity +" * " + orderedItem.getCost() +" = " + quantity* orderedItem.getCost() 
 		
 	}
 
